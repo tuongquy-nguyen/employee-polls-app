@@ -8,7 +8,7 @@ const DashboardPage = (props) => {
   return (
     <div>
       <div className="dashboard-question-kind">
-        <h3 className="center">New Questions</h3>
+        <h3 className="center">Latest Questions</h3>
         {questionsList(questionNew)}
       </div>
       <div className="dashboard-question-kind">

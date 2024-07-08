@@ -11,9 +11,9 @@ const CreateQuestionPage = (props) => {
 
   return (
     <div>
-      <h1 className="center">Would You Rather</h1>
+      <h1 className="center">Would You Rather Choose</h1>
       <h2 className="center" style={{ color: "#A9A9A9" }}>
-        Create Your Own Poll
+        Create Your Poll
       </h2>
       <form className="create-question-form" onSubmit={onSubmit}>
         <h3 className="center">First Option</h3>

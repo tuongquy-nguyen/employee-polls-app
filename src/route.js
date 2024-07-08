@@ -9,7 +9,7 @@ import DashboardPage from "./pages/DashBoardPage/DashBoardPage";
 import QuestionPage from "./pages/QuestionPage/QuestionPage";
 import CreateQuestionPage from "./pages/CreateQuestionPage/CreateQuestionPage";
 import LeaderboardPage from "./pages/LeaderBoardPage/LeaderBoardPage";
-import NotFound404Page from "./pages/NotFound404Page";
+import NotFound404Page from "./pages/Error/NotFound404Page";
 
 export const authedRoutes = [
   {

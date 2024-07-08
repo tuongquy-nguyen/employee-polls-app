@@ -30,7 +30,7 @@ const Navbar = ({ dispatch, authenticationUser }) => {
             to={CREATE_QUESTION_PATH}
             className="nav-link"
           >
-            Create New Poll
+            New-poll
           </Link>
         </li>
         <li>
