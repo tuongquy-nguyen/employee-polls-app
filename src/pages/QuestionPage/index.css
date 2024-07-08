@@ -1,0 +1,53 @@
+.poll-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.poll-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.poll-option {
+    position: relative;
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.background-voted {
+    background-color: #4ce52d;
+}
+
+.background-not-voted {
+    background-color: #ffffff;
+}
+
+.poll-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.poll-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #63b2ac;
+    color: white;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+}
+
+.poll-option+.poll-option {
+    margin-left: 2%;
+}

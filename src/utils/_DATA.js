@@ -2,7 +2,7 @@ let users = {
   sarahedo: {
     id: "sarahedo",
     name: "Sarah Edo",
-    password: "clgt12345",
+    password: "dummypassword",
     avatarURL: "https://cdn-icons-png.flaticon.com/512/4086/4086679.png",
     answers: {
       "8xf0y6ziyjabvozdd253nd": "optionOne",
@@ -15,7 +15,7 @@ let users = {
   tylermcginnis: {
     id: "tylermcginnis",
     name: "Tyler McGinnis",
-    password: "clgt12345",
+    password: "dummypassword",
     avatarURL:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIrQli6t3T1c6xaQzpqnHBwTocN3J7tYHN2QcYj4NKjqwjX2tn2MfUcq2LwpUTEW-ym-c&usqp=CAU",
     answers: {
@@ -27,7 +27,7 @@ let users = {
   johndoe: {
     id: "johndoe",
     name: "John Doe",
-    password: "clgt12345",
+    password: "dummypassword",
     avatarURL:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_YNPXrK4OdznBlx2Pzr94g5LuAvLhTK509vR7ZilOy0iVLiG6G_zCxN-JVHxTs-QkF5U&usqp=CAU",
     answers: {
@@ -115,7 +115,7 @@ let questions = {
     },
     optionTwo: {
       votes: ["tylermcginnis"],
-      text: "write Swift",
+      text: "write C#",
     },
   },
 };

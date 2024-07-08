@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, Fragment } from "react";
+import { Routes, Route } from "react-router-dom";
+import { handleInitialData } from "./actions/initializeData";
+import { connect } from "react-redux";
+import { LoadingBar } from "react-redux-loading-bar";
+import { authedRoutes } from "./route";
+import NavBar from "./components/NavBar/NavBar";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import "./App.css";
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    props.dispatch(handleInitialData());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {props.authenticationUser !== null && (
+        <Fragment>
+          <LoadingBar />
+          <div className="container">
+            <NavBar />
+            <Routes>
+              {authedRoutes.map((route, index) => {
+                const { path, exact, element } = route;
+                return (
+                  <Route
+                    key={index}
+                    path={path}
+                    exact={exact}
+                    element={element}
+                  />
+                );
+              })}
+            </Routes>
+          </div>
+        </Fragment>
+      )}
+      {props.authenticationUser === null && <LoadingBar />}
+      {props.authenticationUser === null && props.loading === false && (
+        <Fragment>
+          <div className="container">
+            <Routes>
+              <Route path="*" exact element={<LoginPage />} />
+            </Routes>
+          </div>
+        </Fragment>
+      )}
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = ({ authenticationUser, loadingBar }) => ({
+  loading: loadingBar != null && loadingBar.default === 1,
+  authenticationUser,
+});
+
+export default connect(mapStateToProps)(App);
